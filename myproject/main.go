@@ -1,6 +1,7 @@
 package main
 
 import (
+	"example/SliceAndMap"
 	"example/flowcontrol"
 	"fmt"
 )
@@ -15,5 +16,7 @@ func main() {
     fmt.Println(flowcontrol.CreatePerson())
     flowcontrol.ReturnFirstName(flowcontrol.CreatePerson())
     flowcontrol.PrintArray()
-
+    result := (SliceAndMap.CreateAndManipulateSlice())
+    SliceAndMap.PrintSlice(result)
+    SliceAndMap.CreateAndManipulateMap()
 }
