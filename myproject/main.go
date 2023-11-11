@@ -2,13 +2,12 @@ package main
 
 import (
 	"database/sql"
+	"example/SliceAndMap"
+	"example/flowcontrol"
 	"example/myproject/api"
 	"fmt"
 	"log"
 	"net/http"
-  "example/SliceAndMap"
-	"example/flowcontrol"
-	"fmt"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -29,8 +28,6 @@ func main() {
 
     log.Println("server starting on port 8080...")
     log.Fatal(http.ListenAndServe(":8080", nil))
-)
-func main() {
     a := 87
     day := 3
     fmt.Println("Hello, World!")
