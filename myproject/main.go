@@ -6,6 +6,9 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+  "example/SliceAndMap"
+	"example/flowcontrol"
+	"fmt"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -26,8 +29,19 @@ func main() {
 
     log.Println("server starting on port 8080...")
     log.Fatal(http.ListenAndServe(":8080", nil))
-    
+)
+func main() {
     a := 87
     day := 3
     fmt.Println("Hello, World!")
+    flowcontrol.Sum()
+    flowcontrol.CheckEvenOrOdd(a)
+    flowcontrol.DayOfWeek(day)
+    fmt.Println(&a) //Pointer
+    fmt.Println(flowcontrol.CreatePerson())
+    flowcontrol.ReturnFirstName(flowcontrol.CreatePerson())
+    flowcontrol.PrintArray()
+    result := (SliceAndMap.CreateAndManipulateSlice())
+    SliceAndMap.PrintSlice(result)
+    SliceAndMap.CreateAndManipulateMap()
 }
